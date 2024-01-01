@@ -1,7 +1,7 @@
 import webpack from "webpack";
 import htmlWebpackPlugin from "html-webpack-plugin";
 
-import { BuildOptions } from "../types/config";
+import { BuildOptions } from "./types/config";
 
 export function buildPlugins(
   options: BuildOptions
