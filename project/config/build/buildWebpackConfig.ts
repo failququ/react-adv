@@ -22,7 +22,7 @@ export function buildWebpackConfig(
     },
     plugins: buildPlugins(options),
     module: {
-      rules: buildLoaders(),
+      rules: buildLoaders(options),
     },
     resolve: buildResolvers(),
     // генерировать сурс мапы, чтобы при возникновении ошибки видеть стек трейс
