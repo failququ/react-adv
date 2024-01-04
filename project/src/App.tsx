@@ -1,12 +1,17 @@
-import { Suspense } from "react";
+import { Suspense, useContext, useState } from "react";
 import { Route, Routes, Link } from "react-router-dom";
 
 import { MainPageLazy } from "./pages/MainPage/MainPage.lazy";
 import { AboutPageLazy } from "./pages/AboutPage/AboutPage.lazy";
+import { useTheme } from "./theme/useTheme";
+
+import "./styles/index.scss";
 
 const App = () => {
+  const { theme, handleChangeTheme } = useTheme();
   return (
-    <div className="app">
+    <div className={`app ${theme}`}>
+      <button onClick={handleChangeTheme}>Сменить тему</button>
       <Link to="/">Главная</Link>
       <Link to="/about">О нас</Link>
       <Suspense fallback={<div>Loading...</div>}>
