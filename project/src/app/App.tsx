@@ -1,10 +1,10 @@
-import { Suspense, useContext, useState } from "react";
+import { Suspense } from "react";
 import { Route, Routes, Link } from "react-router-dom";
 
-import { MainPageLazy } from "./pages/MainPage/MainPage.lazy";
-import { AboutPageLazy } from "./pages/AboutPage/AboutPage.lazy";
-import { useTheme } from "./theme/useTheme";
-import { classNames } from "./utils/classNames/classNames";
+import { AboutPage } from "pages/AboutPage";
+import { MainPage } from "pages/MainPage";
+import { useTheme } from "app/providers/ThemeProvider";
+import { classNames } from "shared/lib/classNames/classNames";
 
 import "./styles/index.scss";
 
@@ -18,8 +18,8 @@ const App = () => {
       <Link to="/about">О нас</Link>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<MainPageLazy />} />
-          <Route path="/about" element={<AboutPageLazy />} />
+          <Route path="/" element={<MainPage />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
       </Suspense>
     </div>

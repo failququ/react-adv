@@ -10,7 +10,10 @@
     "allowSyntheticDefaultImports": true,
     // Позволяет использовать обычный import from, вместо CommonJS require
     "esModuleInterop": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    }
   },
   "ts-node": {
     "compilerOptions": {
