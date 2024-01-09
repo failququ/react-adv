@@ -16,5 +16,9 @@ export function buildPlugins(
       filename: "css/[name].[contenthash:8].css",
       chunkFilename: "css/[name].[contenthash:8].css]",
     }),
+    //Позволяет прокинуть глобальные переменные в приложение
+    new webpack.DefinePlugin({
+      __IS_DEV__: JSON.stringify(options.isDev),
+    }),
   ];
 }

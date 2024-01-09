@@ -1,6 +1,7 @@
 import { classNames } from "shared/lib/classNames/classNames";
 
 import { ThemeSwitch } from "shared/ui/ThemeSwitch";
+import { LangSwitcher } from "shared/ui/LangSwitcher";
 
 import styles from "./Sidebar.module.scss";
 
@@ -30,6 +31,7 @@ const Sidebar: FC<Props> = (props) => {
       <button onClick={handleCollapse}>toggle</button>
       <div className={styles.switchers}>
         <ThemeSwitch />
+        <LangSwitcher />
       </div>
     </div>
   );
