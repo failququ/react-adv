@@ -24,7 +24,7 @@ const ThemeSwitch: FC<Props> = (props) => {
       theme="clean"
       onClick={handleChangeTheme}
     >
-      {theme === Theme.DARK ? <LightIcon /> : <DarkIcon />}
+      {theme === Theme.LIGHT ? <LightIcon /> : <DarkIcon />}
     </Button>
   );
 };

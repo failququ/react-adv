@@ -1,6 +1,5 @@
 import { classNames } from "shared/lib/classNames/classNames";
 import UILink from "shared/ui/UILink/UILink";
-import { ThemeSwitch } from "shared/ui/ThemeSwitch";
 
 import styles from "./Navbar.module.scss";
 
@@ -15,7 +14,6 @@ const Navbar: FC<NavbarProps> = (props) => {
 
   return (
     <div className={classNames(styles.navbar, {}, [className])}>
-      <ThemeSwitch />
       <div className={styles.links}>
         <UILink theme="primary" to="/">
           Главная
