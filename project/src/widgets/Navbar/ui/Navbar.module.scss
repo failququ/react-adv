@@ -5,11 +5,11 @@
   background: var(--inverted-bg-color);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   padding: 20px;
 }
 
 .links {
   display: flex;
   gap: 7px;
+  margin-left: auto;
 }
